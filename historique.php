@@ -34,7 +34,7 @@
     
     <section>
                 
-        <div class "tableau">
+        <div class ="tableau">
         <p>Date de changement</p>
             <div>
             <?php foreach($ampoule as $value) : ?>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class "tableau">
+        <div class ="tableau">
         <p>Etage</p>
             <div>
             <?php foreach($ampoule2 as $value2) : ?>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class "tableau">
+        <div class ="tableau">
         <p>Position</p>
             <div>
             <?php foreach($ampoule3 as $value3) : ?>
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class "tableau">
+        <div class= "tableau">
         <p>Prix</p>
             <div>
             <?php foreach($ampoule4 as $value4) : ?>

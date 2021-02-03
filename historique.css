@@ -49,6 +49,28 @@ nav a:hover{
 
 
 body {
-    background-color: rgb(89, 0, 255);
-    position: relative;
+    background-color: rgb(190, 154, 255);
 } 
+
+
+section {
+    display: flex;
+    justify-content: space-around;
+    line-height: 20px;
+}
+
+
+p{
+    font-weight: 400px;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.tableau > div {
+    margin-top: 15px;
+    font-size: 17px;
+    text-align: center;
+}
+
+

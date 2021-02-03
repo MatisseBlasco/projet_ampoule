@@ -18,6 +18,7 @@ nav  ul {
     padding: 0px;
 }
 
+
 nav li{
     width: 50%;
     text-align: center;
@@ -30,6 +31,7 @@ nav ul::after{
     clear: both;
 }
 
+
 nav a{
     display: block;
     text-decoration: none;
@@ -39,6 +41,7 @@ nav a{
     padding: 15px 0px;
 }
 
+
 nav a:hover{
     color: rgb(89, 0, 255);
     border-bottom: 2px solid rgb(89, 0, 255);
@@ -46,6 +49,6 @@ nav a:hover{
 
 
 body {
-    background-color: rgb(204, 177, 255);
+    background-color: rgb(190, 154, 255);
     position: relative;
 } 
