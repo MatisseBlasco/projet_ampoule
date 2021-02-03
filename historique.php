@@ -32,43 +32,45 @@
         $ampoule4=$connect->query("SELECT prix FROM ampoule"); 
     ?>
     
-
-    <div>
-    <p>Date de changement</p>
-        <div>
-        <?php foreach($ampoule as $value) : ?>
-        <?= $value['date_de_changement']; ?>
-        <?php endforeach; ?>
+    <section>
+                
+        <div class "tableau">
+        <p>Date de changement</p>
+            <div>
+            <?php foreach($ampoule as $value) : ?>
+            <?= $value['date_de_changement']; ?> <br>
+            <?php endforeach; ?>
+            </div>
         </div>
-    </div>
 
-    <div>
-    <p>Etage</p>
-        <div>
-        <?php foreach($ampoule2 as $value2) : ?>
-        <?= $value2['etage']; ?>
-        <?php endforeach; ?>
+        <div class "tableau">
+        <p>Etage</p>
+            <div>
+            <?php foreach($ampoule2 as $value2) : ?>
+            <?= $value2['etage']; ?> <br>
+            <?php endforeach; ?>
+            </div>
         </div>
-    </div>
 
-    <div>
-    <p>Position</p>
-        <div>
-        <?php foreach($ampoule3 as $value3) : ?>
-        <?= $value3['position']; ?>
-        <?php endforeach; ?>
+        <div class "tableau">
+        <p>Position</p>
+            <div>
+            <?php foreach($ampoule3 as $value3) : ?>
+            <?= $value3['position']; ?> <br>
+            <?php endforeach; ?>
+            </div>
         </div>
-    </div>
 
-    <div>
-    <p>Prix</p>
-        <div>
-        <?php foreach($ampoule4 as $value4) : ?>
-        <?= $value4['prix']; ?>
-        <?php endforeach; ?>
+        <div class "tableau">
+        <p>Prix</p>
+            <div>
+            <?php foreach($ampoule4 as $value4) : ?>
+            <?= $value4['prix']; ?> <br>
+            <?php endforeach; ?>
+            </div>
         </div>
-    </div>
 
+    </section>
 
 </body>
 </html>
