@@ -17,19 +17,19 @@
     </header>
 
     <?php
-        $servername= "localhost";
-        $dataname= "projet_ampoule";
-        $user ="root";
+        $servername = "localhost";
+        $dataname = "projet_ampoule";
+        $user = "root";
         try{
             $connect = new PDO("mysql:host=$servername; dbname=$dataname", $user);
         }
         catch (PDOException $e){
             echo "Erreur :". $e->getMessage();
         }
-        $ampoule=$connect->query("SELECT date_de_changement FROM ampoule"); 
-        $ampoule2=$connect->query("SELECT etage FROM ampoule"); 
-        $ampoule3=$connect->query("SELECT position FROM ampoule"); 
-        $ampoule4=$connect->query("SELECT prix FROM ampoule"); 
+        $ampoule = $connect->query("SELECT date_de_changement FROM ampoule"); 
+        $ampoule2 = $connect->query("SELECT etage FROM ampoule"); 
+        $ampoule3 = $connect->query("SELECT position FROM ampoule"); 
+        $ampoule4 = $connect->query("SELECT prix FROM ampoule"); 
     ?>
     
     <section>
