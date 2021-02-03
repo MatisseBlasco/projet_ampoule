@@ -10,8 +10,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="historique.php">Historique</a></li>
-                <li><a href="ajouter.php">Ajouter</a></li>
+                <li><a id="historique" href="historique.php">Historique</a></li>
+                <li><a id="ajouter" href="ajouter.php">Ajouter</a></li>
             </ul>
         </nav>
     </header>

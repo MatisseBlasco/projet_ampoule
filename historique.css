@@ -32,6 +32,11 @@ nav ul::after{
 }
 
 
+#historique {
+    color: #3c6997;
+}
+
+
 nav a{
     display: block;
     text-decoration: none;

@@ -10,11 +10,24 @@
     <header>
         <nav>
             <ul>
-                <li><a href="historique.php">Historique</a></li>
-                <li><a href="ajouter.php">Ajouter</a></li>
+                <li><a id="historique" href="historique.php">Historique</a></li>
+                <li><a id="ajouter" href="ajouter.php">Ajouter</a></li>
             </ul>
         </nav>
     </header>
+    
+    <!-- <p id="lien"><a href="ajouter.php">Modifier</a></p> -->
+    <p id="lien"><a href="ajouter.php?date_de_changement=$_date_de_changement&amp;etage=&amp;position=&amp;prix=">Modifier</a></p>
+
+    <?php
+
+    echo $_GET['date_de_changement'] ."<br>";
+    echo $_GET['etage'] ."<br>";
+    echo $_GET['position'] ."<br>";
+    echo $_GET['prix'] ."<br>";
+
+    // $_GET['date_de_changement']=""
+    ?>
 
     <?php
         $servername = "localhost";
