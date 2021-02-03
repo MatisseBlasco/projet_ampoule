@@ -16,47 +16,59 @@
         </nav>
     </header>
 
-    <p><a href="ajouter.php"> Ajouter </a></p>
-
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Date de changement</th>
-            <th>Etage </th>
-            <th>Position</th>
-            <th>Prix</th>
-        </tr>
-    </table>
-
-<?php
-    define('DATABASE', 'projet_ampoule');
-    define('USER', 'root');
-    define('PWD', '');
-    define('HOST', 'localhost');
-        
-        try {
-                $dbh = new PDO('mysql:host='.HOST.';dbname='.DATABASE, USER, PWD, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-            } catch (PDOException $e) {
-                print "Erreur !: " . $e->getMessage() . "<br/>";
-                die();
-            }
-        $sql = 'SELECT id, date_de_changement, etage, position, prix FROM ampoule';
-        $sth = $dbh->prepare($sql);
-        $sth->execute();
-        $datas = $sth->fetchAll(PDO::FETCH_ASSOC);
-        foreach( $datas as $data){
-            echo'<tr>';
-                echo'<td>'.$data['id'].'</td>';
-                echo'<td>'.$data['date_de_changement'].' </td>';
-                echo'<td>'.$data['etage'].' </td>';
-                echo'<td>'.$data['position'].' </td>';
-                echo'<td>'.$data['prix'].'</td>';
-                echo '<td><a href="edit.php?edit=1&id='.$data['id'].'">Modifier</a> <a href="delete.php?id='.$data['id'].'">Supprimer<a><td>';
-            echo '</tr>';
+    <?php
+        $servername= "localhost";
+        $dataname= "projet_ampoule";
+        $user ="root";
+        try{
+            $connect = new PDO("mysql:host=$servername; dbname=$dataname", $user);
         }
-
-        // $intlDateFormatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::SHORT, IntlDateFormatter::NONE);
+        catch (PDOException $e){
+            echo "Erreur :". $e->getMessage();
+        }
+        $ampoule=$connect->query("SELECT date_de_changement FROM ampoule"); 
+        $ampoule2=$connect->query("SELECT etage FROM ampoule"); 
+        $ampoule3=$connect->query("SELECT position FROM ampoule"); 
+        $ampoule4=$connect->query("SELECT prix FROM ampoule"); 
     ?>
+    
+
+    <div>
+    <p>Date de changement</p>
+        <div>
+        <?php foreach($ampoule as $value) : ?>
+        <?= $value['date_de_changement']; ?>
+        <?php endforeach; ?>
+        </div>
+    </div>
+
+    <div>
+    <p>Etage</p>
+        <div>
+        <?php foreach($ampoule2 as $value2) : ?>
+        <?= $value2['etage']; ?>
+        <?php endforeach; ?>
+        </div>
+    </div>
+
+    <div>
+    <p>Position</p>
+        <div>
+        <?php foreach($ampoule3 as $value3) : ?>
+        <?= $value3['position']; ?>
+        <?php endforeach; ?>
+        </div>
+    </div>
+
+    <div>
+    <p>Prix</p>
+        <div>
+        <?php foreach($ampoule4 as $value4) : ?>
+        <?= $value4['prix']; ?>
+        <?php endforeach; ?>
+        </div>
+    </div>
+
 
 </body>
 </html>
