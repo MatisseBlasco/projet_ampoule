@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="live.css">
+    <link rel="stylesheet" href="style.css">
     <title>Live</title>
 </head>
 <body>
@@ -31,12 +31,12 @@
             ?>
              <div>
                 <label for="date_de_changement">Date de changement</label>
-                <input type="date" name="date_de_changement" id="date_de_changement" value="<?= $data ['date_de_changement'] ?? ''?>">
+                <input type="date" name="date_de_changement" class="form" value="<?= $data ['date_de_changement'] ?? ''?>">
         </div>
 
         <div>
             <label for="etage">Etage</label>
-            <select name="etage" id="etage_select" value="<?= $data ['etage'] ?? ' '?>">
+            <select name="etage" class="form"  value="<?= $data ['etage'] ?? ' '?>">
                 <option value="">Choisir un étage</option>
                 <option value="rez-de-chaussee"  <?= (isset($data["etage"]) && $data["etage"] == "rez-de-chaussee")? "selected" : "" ?> >rez-de-chaussée</option>
                 <option value="etage 1"  <?= (isset($data["etage"]) && $data["etage"] == "etage 1")? "selected" : "" ?> >étage 1</option>
@@ -55,7 +55,7 @@
 
         <div>
             <label for="position">Position</label>
-            <select name="position" id="position_select" value="<?= $data 
+            <select name="position" class="form" value="<?= $data 
             ['position'] ?? ' '?>">
                 <option value="">Choisir une position</option>
                 <option value="cote gauche"   <?= (isset($data["position"]) && $data["position"] == "cote gauche")? "selected" : "" ?> >côté gauche</option>
@@ -66,7 +66,7 @@
 
         <div>
             <label for="prix">Prix</label>
-            <input type="number" step="0.01" name="prix" id="prix" value="<?= $data
+            <input type="number" step="0.01" name="prix" class="form" value="<?= $data
             ['prix'] ?? ' '?>"> 
         </div>
 
